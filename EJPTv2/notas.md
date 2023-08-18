@@ -1,3 +1,3 @@
-Estas son los comandos utilizados
-hola que tal
-como estas
+#Este es el titulo pricipal
+##segundo
+###tercero
