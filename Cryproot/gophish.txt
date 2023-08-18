@@ -1,0 +1,55 @@
+GOPHISH
+
+SENDING PROFILES
+
+Name : gmail example@gmail.com
+Interface Type : SMTP
+SMTP From : example@gmail.com
+HOST : smtp.gmail.com:587
+Username : example@gmail.com
+Password : Key password from gmail
+Check box - Ignore Certificate Errors
+
+LANDING PAGE
+
+Name : xxxx
+Import site : https://login.salesforce.com/?locale=eu
+
+Create a new email template
+Name : XXXXX
+Event sender : Admin <example@gmail.com>
+Subject : XXX
+
+ENTERPRISE GMAIL :
+Google Workspace, Settings for Gmail, Spam phishing and malware (example@gmail.com)
+
+
+
+SETUP SSL - CERTBOT
+
+certbot certonly --standalone --cert-name XXXXXX -d XXXXXXX -m CORREOREPORTAR --agree-tos --noninteractive
+
+{
+	"admin_server": {
+		"listen_url": "0.0.0.0:3333",
+		"use_tls": true,
+		"cert_path": "/etc/letsencrypt/live/xxxxxxx/fullchain.pem",
+		"key_path": "/etc/letsencrypt/live/xxxxxx/privkey.pem",
+		"trusted_origins": []
+	},
+	"phish_server": {
+		"listen_url": "0.0.0.0:443",
+		"use_tls": true,
+		"cert_path": "/etc/letsencrypt/live/xxxxxx/fullchain.pem",
+		"key_path": "/etc/letsencrypt/live/xxxxxx/privkey.pem"
+	},
+	"db_name": "sqlite3",
+	"db_path": "gophish.db",
+	"migrations_prefix": "db/db_",
+	"contact_address": "",
+	"logging": {
+		"filename": "",
+		"level": ""
+	}
+}
+
