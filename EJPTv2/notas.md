@@ -93,6 +93,13 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/common_passwords.txt
 ```
 
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use auxiliary/scanner/ssh/libssh_auth_bypass
+```
+
 ### HTTP - 80
 Hypertext Transfer Protocol (HTTP) es el protocolo estándar de la web para la comunicación entre navegadores y servidores. Opera en el puerto 80, permitiendo la solicitud y transferencia de contenido web, como páginas, imágenes y otros recursos, a través de conexiones no cifradas.
 
@@ -125,6 +132,17 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/namelist.txt
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 /usr/share/metasploit-framework/data/wordlists/common_users.txt
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use auxiliary/scanner/http/http_version
+use exploit/unix/http/xdebug_unauth_exec
+exploit/unix/webapp/xoda_file_upload
+exploit/windows/http/badblue_passthru
+exploit/multi/http/apache_mod_cgi_bash_env_exec (shellshock - cgi)
 ```
 
 ### MYSQL 3306
