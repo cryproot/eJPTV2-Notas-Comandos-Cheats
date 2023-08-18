@@ -1,4 +1,4 @@
-P# Documentación: Comandos de enumeración
+# Documentación: Comandos de enumeración
 
 ## Descripción
 Esta documentación proporciona una introducción básica de los comandos útlices para el examen EJPTv2
