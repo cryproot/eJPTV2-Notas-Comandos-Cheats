@@ -16,8 +16,8 @@
 ## Contacto
 ¡Conéctate conmigo en las redes sociales y en mi canal de ciberseguridad para estar al tanto de las últimas novedades y descubrimientos en el mundo de la ciberseguridad!
 
-- Linkedin: [@GiafarMaldonado]([https://twitter.com/GiafarMaldonado](https://www.linkedin.com/in/giafar-ali-adbul-maldonado-valerio-722901150/))
-- Canal de Ciberseguridad: [CrypRoot](https://www.youtube.com/c/cryproot)
+- Linkedin: [@GiafarMaldonado](https://www.linkedin.com/in/giafar-ali-adbul-maldonado-valerio-722901150/)
+- Canal de Ciberseguridad: [Cryproot](https://www.youtube.com/@cryproot9845/videos)
 
 ## Conclusión
 Mi pasión por la ciberseguridad me impulsa a seguir aprendiendo, experimentando y compartiendo. ¡Juntos podemos crear un entorno digital más seguro y resistente!
