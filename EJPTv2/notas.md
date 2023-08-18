@@ -1,4 +1,4 @@
-# Documentación: Comandos de enumeración
+P# Documentación: Comandos de enumeración
 
 ## Descripción
 Esta documentación proporciona una introducción básica de los comandos útlices para el examen EJPTv2
@@ -76,4 +76,38 @@ Lista de palabras para ataques de fuerza bruta
 ```python
 /usr/share/metasploit-framework/data/wordlists/common_users.txt
 /usr/share/metasploit-framework/data/wordlists/common_passwords.txt
+```
+
+### HTTP - 80
+Hypertext Transfer Protocol (HTTP) es el protocolo estándar de la web para la comunicación entre navegadores y servidores. Opera en el puerto 80, permitiendo la solicitud y transferencia de contenido web, como páginas, imágenes y otros recursos, a través de conexiones no cifradas.
+
+```python
+whatweb IP
+http IP
+dirb http://IP
+nmap --script http-headers -sV -p 80 IP
+nmap -sV -script banner IP
+nmap –script http-enum -sV -p80 IP
+nmap –script http-headers -sV -p80 IP
+nmap --script http-methods --script-args http-methods.url-path=/webdav/ IP
+curl http://IP/
+auxiliary/scanner/http/apache_userdir_enum
+auxiliary/scanner/http/brute_dirs
+auxiliary/scanner/http/dir_scanner
+auxiliary/scanner/http/dir_listing
+auxiliary/scanner/http/http_put
+auxiliary/scanner/http/files_dir
+auxiliary/scanner/http/http_login
+auxiliary/scanner/http/http_header
+auxiliary/scanner/http/http_version
+auxiliary/scanner/http/robots_txt
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/namelist.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
 ```
