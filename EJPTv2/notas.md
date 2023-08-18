@@ -47,7 +47,6 @@ cp /usr/share/doc/python3-impacket/examples/psexec.py /root/Desktop
 Tools: 
 Psexec - conexión para smb que nos brinda shell
 https://github.com/fortra/impacket/blob/master/examples/psexec.py
-
 ```
 
 #### Diccionarios
