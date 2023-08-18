@@ -1,7 +1,7 @@
 # Escalación de Privilegios en Windows
 
 ## Descripción
-a escalación de privilegios en sistemas Windows es un proceso mediante el cual un atacante busca obtener acceso a niveles superiores de autoridad o control en un sistema comprometido. Esto puede permitir al atacante ejecutar comandos con derechos de administrador u otros niveles de acceso privilegiado.
+La escalación de privilegios en sistemas Windows es un proceso mediante el cual un atacante busca obtener acceso a niveles superiores de autoridad o control en un sistema comprometido. Esto puede permitir al atacante ejecutar comandos con derechos de administrador u otros niveles de acceso privilegiado.
 
 ### Automatizado
 
