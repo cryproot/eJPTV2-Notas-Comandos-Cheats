@@ -21,6 +21,13 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
 
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use exploit/unix/ftp/vsftpd_234_backdoor
+```
+
 ### Server Message Block (SMB) - 137,138,139,445
 Server Message Block (SMB) es un protocolo de red que facilita el intercambio de archivos, impresoras y recursos entre sistemas. Opera en los puertos 137, 138, 139 y 445. A pesar de su utilidad, el puerto 445 es conocido por vulnerabilidades de seguridad.
 
@@ -58,6 +65,14 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/wordlists/metasploit/unix_passwords.txt
 /usr/share/wordlists/metasploit/unix_users.txt
 /usr/share/wordlists/rockyou.tx
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+exploit/linux/samba/is_known_pipename
+search ms17_010
 ```
 
 ### Secure Shell (SSH) - 22
