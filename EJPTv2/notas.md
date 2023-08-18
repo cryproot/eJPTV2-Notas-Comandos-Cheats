@@ -13,8 +13,11 @@ sudo nmap -sV -p21 -sC -A IP
 nc IP 21
 ```
 
-#### Declaración de listas
-Para declarar una lista en Python, se utilizan corchetes `[]` y se separan los elementos con comas. Ejemplo:
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
 
 ```python
-mi_lista = [1, 2, 3, 4, 5]
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+```
+
