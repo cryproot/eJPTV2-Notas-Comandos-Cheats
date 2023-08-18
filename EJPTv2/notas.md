@@ -1,7 +1,7 @@
-# Documentación: Introducción a Listas en Python
+# Documentación: Comandos de enumeración
 
 ## Descripción
-Esta documentación proporciona una introducción básica al concepto de listas en el lenguaje de programación Python.
+Esta documentación proporciona una introducción básica de los comandos útlices para el examen EJPTv2
 
 ### ¿Qué son las listas?
 Las listas son estructuras de datos versátiles en Python que permiten almacenar y acceder a múltiples elementos de datos en una sola variable.
