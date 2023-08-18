@@ -59,3 +59,21 @@ Lista de palabras para ataques de fuerza bruta
 /usr/share/wordlists/metasploit/unix_users.txt
 /usr/share/wordlists/rockyou.tx
 ```
+
+### Secure Shell (SSH) - 22
+Secure Shell (SSH) es un protocolo de red seguro que permite la comunicación y el acceso remoto a sistemas mediante el cifrado de datos. Utiliza el puerto 22 para establecer conexiones seguras y autenticadas, garantizando la confidencialidad y la integridad de la información transmitida.
+
+```python
+nmap --script ssh2-enum-algos IP
+nmap --script ssh-hostkey --script-args ssh_hostkey=full IP
+nmap -p 22 --script ssh-auth-methods --script-args="ssh.user=student" IP
+find / -name "flag" (busca bandera)
+```
+
+#### Diccionarios
+Lista de palabras para ataques de fuerza bruta
+
+```python
+/usr/share/metasploit-framework/data/wordlists/common_users.txt
+/usr/share/metasploit-framework/data/wordlists/common_passwords.txt
+```
