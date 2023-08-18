@@ -13,6 +13,11 @@
 - **Hack The Box:** Soy un miembro activo de Hack The Box, donde disfruto resolviendo desafiantes máquinas y retos de seguridad para mejorar mis habilidades y conocimientos.
 - **Canal de Ciberseguridad - CrypRoot:** Administro el canal de ciberseguridad **CrypRoot**, donde comparto tutoriales, trucos y recursos relacionados con la seguridad informática. ¡Acompáñame en mi viaje hacia un mundo más seguro!
 
+## Donaciones
+Si deseas apoyarme en mi continuo esfuerzo por compartir conocimientos y contribuir a la comunidad de ciberseguridad, estaré agradecido por tu donación. Cada pequeña contribución ayuda a mantener mi canal y proyectos en línea.
+
+Puedes realizar una donación a través de PayPal utilizando el siguiente enlace: [¡Dona en PayPal!](https://www.paypal.com/donate/?hosted_button_id=W4PSE3U4H829J)
+
 ## Contacto
 ¡Conéctate conmigo en las redes sociales y en mi canal de ciberseguridad para estar al tanto de las últimas novedades y descubrimientos en el mundo de la ciberseguridad!
 
