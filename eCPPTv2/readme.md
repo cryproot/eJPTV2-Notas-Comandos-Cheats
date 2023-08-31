@@ -9,5 +9,5 @@ La certificación eCPPTv2, emitida por **eLearnSecurity**, es una certificación
 ## Certificado eCPPTv2
 Aquí presento con orgullo mi certificado eCPPTv2, que representa mi compromiso y dedicación en el campo de la ciberseguridad:
 
-![Certificación eCPPTv2](certificado2.png)
+![Certificación eCPPTv2](certificado2.jpg)
 
