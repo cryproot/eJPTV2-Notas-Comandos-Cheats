@@ -9,6 +9,11 @@ Comprender diferentes formas de realizar transferencias de archivos y cómo func
 sudo impacket-smbserver share -smb2support /tmp/smbshare (Linux)
 copy \\192.168.220.133\share\nc.exe (windows)
 ```
+### Windodws a linux (smb no autenticado)
+
+```python
+wget http://10.10.23.2/archivo.txt -O archivo_local.txt (shell en kali linux previamente)
+```
 
 ### Linux - Windows (smb con autentificación)
 
