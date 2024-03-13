@@ -1,4 +1,4 @@
-# Escalación de Privilegios en Windows
+# Transferencia de Archivos
 
 ## Descripción
 Comprender diferentes formas de realizar transferencias de archivos y cómo funcionan las redes puede ayudarnos a lograr nuestros objetivos durante una evaluación. Debemos ser conscientes de los controles del host que pueden impedir nuestras acciones, como la inclusión en listas blancas de aplicaciones o el bloqueo AV/EDR de aplicaciones o actividades específicas. Las transferencias de archivos también se ven afectadas por dispositivos de red como Firewalls, IDS o IPS que pueden monitorear o bloquear puertos particulares u operaciones poco comunes.
