@@ -1,6 +1,6 @@
 # Password Attacks o Ataques de Contraseña
 ## Descripción
-MSFVENOM es una herramienta que viene integrada en metasploit framework que sirve principalmente para crear payloads, podemos ver algunos ejemplos con enconders para darle algo mas de sabor.
+Decifrar contraseñas
 
 ### WinRM (5985 HTTP y 5986 HTTPS)
 ```python
