@@ -23,3 +23,8 @@ hydra -L user.list -P password.list smb://IP
 crackmapexec smb IP -u "user" -p "password" --shares
 smbclient -U user \\\\IP\\SHARENAME
 ```
+
+### Generar lista de palabras basada en reglas
+```python
+hashcat --force password.list -r custom.rule(este arribo debes de elaborar tu regla) --stdout | sort -u > mut_password.list
+```
