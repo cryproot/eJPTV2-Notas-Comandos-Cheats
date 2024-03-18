@@ -4,11 +4,11 @@ Las distribuciones basadas en Linux pueden utilizar muchos mecanismos de autenti
 
 | Algoritmo | Descripción     |
 |-----------|-----------------|
-| $1$       | MD5             |
-| $2a$      | Blowfish        |
-| $2y$      | Eksblowfish     |
-| $5$       | SHA-256         |
-| $6$       | SHA-512         |
+| \$1\$     | MD5             |
+| \$2a\$    | Blowfish        |
+| \$2y\$    | Eksblowfish     |
+| \$5\$     | SHA-256         |
+| \$6\$     | SHA-512         |
 
 
 ## Descifrar contraseñas linux
